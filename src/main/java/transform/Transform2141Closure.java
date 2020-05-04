@@ -9,10 +9,10 @@ public final class Transform2141Closure {
 
     public static ModelGraph transform(ModelGraph g) {
 
-        Vertex v1 = g.getVertex("n4").get();
-        Vertex v2 = g.getVertex("n3").get();
-        Vertex v3 = g.getVertex("n2").get();
-        Vertex v4 = g.getVertex("n1").get();
+        Vertex v1 = g.getVertex("n1").get();
+        Vertex v2 = g.getVertex("n2").get();
+        Vertex v3 = g.getVertex("n3").get();
+        Vertex v4 = g.getVertex("n4").get();
 
         FaceNode t1 = g.getFace("t1").get();
         FaceNode t2 = g.getFace("t2").get();
@@ -53,7 +53,7 @@ public final class Transform2141Closure {
         // faces
         g.removeFace(t2.getId());
         g.insertFace("t8", v1, v4, v5);
-        g.insertFace("t9", v4, v5, v3);
+        g.insertFace("t9", v1, v5, v3);
 
 
         /* REFINE T3 */
@@ -63,13 +63,13 @@ public final class Transform2141Closure {
 
         // edges
         g.deleteEdge(v1, v2);
-        g.insertEdge("e13", v2, v7, true);
-        g.insertEdge("e14", v1, v7, true);
-        g.insertEdge("e15", v7, v4, true);
+        g.insertEdge("e14", v2, v7, true);
+        g.insertEdge("e15", v1, v7, true);
+        g.insertEdge("e16", v7, v4, true);
 
         // faces
         g.removeFace(t3.getId());
-        g.insertFace("t10", v1, v2, v7);
+        g.insertFace("t10", v1, v4, v7);
         g.insertFace("t11", v7, v2, v4);
 
 
@@ -77,8 +77,8 @@ public final class Transform2141Closure {
         // vertices
 
         // edges
-        g.insertEdge("e16", v6, v7, true);
-        g.insertEdge("e17", v1, v6, true);
+        g.insertEdge("e17", v6, v7, true);
+        g.insertEdge("e18", v1, v6, true);
 
         // faces
         g.removeFace(t4.getId());
