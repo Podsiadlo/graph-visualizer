@@ -86,6 +86,21 @@ public final class Transform2141Closure {
         g.insertFace("t13", v7, v6, v1);
         g.insertFace("t14", v1, v3, v6);
 
+
+        /* INTERNAL INSERTIONS */
+
+        // edges
+        g.insertEdge("e19", v5, v7, true);
+
+        // faces
+        g.insertFace("t15", v1, v7, v5);
+        g.insertFace("t16", v2, v5, v7);
+
+        g.insertFace("t17", v4, v5, v7);
+        g.insertFace("t18", v5, v6, v7);
+        g.insertFace("t19", v1, v5, v6);
+
+
         return g;
     }
 
