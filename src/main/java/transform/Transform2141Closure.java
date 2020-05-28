@@ -1,9 +1,6 @@
 package transform;
 
-import model.Coordinates;
-import model.FaceNode;
-import model.ModelGraph;
-import model.Vertex;
+import model.*;
 
 public final class Transform2141Closure {
 
@@ -100,6 +97,16 @@ public final class Transform2141Closure {
         g.insertFace("t18", v5, v6, v7);
         g.insertFace("t19", v1, v5, v6);
 
+
+        /* INTERNAL TETRAHEDRONS */
+
+        Tetrahedron tet1 = new Tetrahedron(v4, v5, v2, v7);
+        Tetrahedron tet2 = new Tetrahedron(v4, v5, v7, v1);
+        Tetrahedron tet3 = new Tetrahedron(v5, v6, v3, v1);
+        Tetrahedron tet4 = new Tetrahedron(v5, v6, v2, v7);
+        Tetrahedron tet5 = new Tetrahedron(v5, v6, v7, v1);
+
+        Tetrahedron[] tetrahedrons = {tet1, tet2, tet3, tet4, tet5};
 
         return g;
     }
