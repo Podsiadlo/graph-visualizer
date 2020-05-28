@@ -1,6 +1,7 @@
 package app;
 
 import model.*;
+import transform.Transform2141Closure;
 import visualization.Visualizer;
 
 import java.util.ArrayList;
@@ -9,6 +10,7 @@ import java.util.List;
 public class Main {
     public static void main(String[] args) {
         ModelGraph graph = generateTetrahedra();
+        Transform2141Closure.transform(graph);
         Visualizer visualizer = new Visualizer(graph);
         visualizer.visualize();
     }
@@ -17,10 +19,10 @@ public class Main {
         ModelGraph graph = new ModelGraph("Graph");
 
         List<Vertex> nodes = new ArrayList<>();
-        nodes.add(graph.insertVertex("n1", new Coordinates(0., 0., 0.)));
-        nodes.add(graph.insertVertex("n2", new Coordinates(1., 0., 0.)));
-        nodes.add(graph.insertVertex("n3", new Coordinates(0.5, 0.866025, 0.)));
-        nodes.add(graph.insertVertex("n4", new Coordinates(0.5, 0.433013, 0.816497)));
+        nodes.add(graph.insertVertex("n4", new Coordinates(0., 0., 0.)));
+        nodes.add(graph.insertVertex("n3", new Coordinates(1., 0., 0.)));
+        nodes.add(graph.insertVertex("n2", new Coordinates(0.5, 0.866025, 0.)));
+        nodes.add(graph.insertVertex("n1", new Coordinates(0.5, 0.433013, 0.816497)));
 
         graph.insertEdge("e1", nodes.get(0), nodes.get(1), true);
         graph.insertEdge("e2", nodes.get(1), nodes.get(2), true);
